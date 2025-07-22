@@ -3,21 +3,17 @@ Life OS Template - Setup Guide
 
 Quick Start (5 Minutes)
 
-Step 1: Download and Extract
+**Step 1: Download and Extract**
 
-1.
-Download the life-os-template.zip file
+1. Download the life-os-template.zip file
 
-2.
-Extract to your desired location
+2. Extract to your desired location
 
-3.
-Open terminal/command prompt in the extracted folder
+3. Open terminal/command prompt in the extracted folder
 
-Step 2: Install Dependencies
+**Step 2: Install Dependencies**
 
 Bash
-
 
 # Install pnpm if you don't have it
 npm install -g pnpm
@@ -26,41 +22,34 @@ npm install -g pnpm
 pnpm install
 
 
-Step 3: Configure Weather API (Optional)
+**Step 3: Configure Weather API (Optional)**
 
-1.
-Visit Tomorrow.io and create a free account
+1. Visit Tomorrow.io and create a free account
 
-2.
-Get your API key from the dashboard
+2. Get your API key from the dashboard
 
-3.
-Open src/App.jsx and replace the API key on line 52:
+3. Open src/App.jsx and replace the API key on line 52:
 
 JavaScript
 
-
 `https://api.tomorrow.io/v4/weather/forecast?location=40.7128,-74.0060&apikey=YOUR_API_KEY_HERE&timesteps=1d&units=imperial`
 
-
-Step 4: Start Development Server
+**Step 4: Start Development Server**
 
 Bash
-
 
 pnpm run dev
 
 
 Open http://localhost:5173 in your browser.
 
-Customization Options
+**Customization Options**
 
-1. Change Location for Weather
+**1. Change Location for Weather**
 
 Edit line 52 in src/App.jsx:
 
 JavaScript
-
 
 // Replace coordinates with your location
 // Format: latitude,longitude
@@ -69,12 +58,11 @@ location=51.5074,-0.1278   // London
 location=35.6762,139.6503  // Tokyo
 
 
-2. Customize Colors
+**2. Customize Colors**
 
 Edit src/App.css to change the color scheme:
 
 CSS
-
 
 :root {
   /* Light mode colors */
@@ -87,19 +75,18 @@ CSS
 }
 
 
-3. Update Branding
+**3. Update Branding**
 
 In src/App.jsx, line 122:
 
 JavaScript
-
 
 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
   Your Brand Name  {/* Change this */}
 </h1>
 
 
-4. Modify Default Content
+**4. Modify Default Content**
 
 Update the sample data in src/App.jsx:
 
@@ -115,13 +102,11 @@ Resources (lines 289-296)
 •
 Archives (lines 316-323)
 
-Deployment Options
+**Deployment Options**
 
-Option 1: Static Hosting (Recommended)
+**Option 1: Static Hosting (Recommended)**
 
 Bash
-
-
 # Build for production
 pnpm run build
 
@@ -132,56 +117,43 @@ pnpm run build
 # - Any static hosting service
 
 
-Option 2: Vercel (Automatic)
+**Option 2: Vercel (Automatic)**
 
-1.
-Push code to GitHub
+1. Push code to GitHub
 
-2.
-Connect repository to Vercel
+2. Connect repository to Vercel
 
-3.
-Deploy automatically on every push
+3. Deploy automatically on every push
 
-Option 3: Netlify
+**Option 3: Netlify**
 
-1.
-Run pnpm run build
+1. Run pnpm run build
 
-2.
-Drag the dist folder to Netlify
+2. Drag the dist folder to Netlify
 
-3.
-Get instant live URL
+3. Get instant live URL
 
-Troubleshooting
+**Troubleshooting**
 
 Weather Not Loading
 
-•
-Check your API key is correct
+• Check your API key is correct
 
-•
-Ensure you have internet connection
+• Ensure you have internet connection
 
-•
-Verify the location coordinates are valid
+• Verify the location coordinates are valid
 
-Styles Not Applying
+**Styles Not Applying**
 
-•
-Clear browser cache
+• Clear browser cache
 
-•
-Check console for errors
+• Check console for errors
 
-•
-Ensure all dependencies installed correctly
+• Ensure all dependencies installed correctly
 
-Build Errors
+**Build Errors**
 
 Bash
-
 
 # Clear cache and reinstall
 rm -rf node_modules
@@ -189,7 +161,7 @@ rm pnpm-lock.yaml
 pnpm install
 
 
-File Structure Explained
+**File Structure Explained**
 
 Plain Text
 
@@ -210,35 +182,27 @@ Advanced Customization
 
 Adding New Features
 
-1.
-Add state variables in App.jsx
+1. Add state variables in App.jsx
 
-2.
-Create UI components
+2. Create UI components
 
-3.
-Add event handlers
+3. Add event handlers
 
-4.
-Style with Tailwind CSS classes
+4. Style with Tailwind CSS classes
 
-Integrating with Notion
+**Integrating with Notion**
 
 While this is a standalone template, you can:
 
-1.
-Export data to Notion format
+1. Export data to Notion format
 
-2.
-Use Notion API to sync data
+2. Use Notion API to sync data
 
-3.
-Embed this as a Notion widget
+3. Embed this as a Notion widget
 
-Adding Data Persistence
+**Adding Data Persistence**
 
 JavaScript
-
 
 // Add to useEffect hooks
 localStorage.setItem('tasks', JSON.stringify(tasks))
@@ -248,37 +212,29 @@ const savedTasks = localStorage.getItem('tasks')
 if (savedTasks) setTasks(JSON.parse(savedTasks))
 
 
-Support
+**Support**
 
 If you encounter issues:
 
-1.
-Check this guide first
+1. Check this guide first
 
-2.
-Review the main README.md
+2. Review the main README.md
 
-3.
-Check browser console for errors
+3. Check browser console for errors
 
-4.
-Ensure all steps were followed correctly
+4. Ensure all steps were followed correctly
 
 License
 
 This template is provided for personal and commercial use. You may:
 
-•
-Use for personal productivity
+• Use for personal productivity
 
-•
-Customize for clients
+• Customize for clients
 
-•
-Resell as part of larger packages
+• Resell as part of larger packages
 
-•
-Modify and redistribute
+• Modify and redistribute
 
 
 
