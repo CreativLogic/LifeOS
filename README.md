@@ -1,0 +1,2 @@
+# LifeOS
+Notion LifeOS Template
